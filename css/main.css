@@ -1,0 +1,287 @@
+
+!figcaption,
+!figure,
+header,
+section {
+  display: block;
+  }
+
+/* --- resets (adjust default styles) --- */
+
+/* remove default margin */
+
+body,
+dd,
+dl,
+figure {
+  margin: 0;
+  }
+
+/* --- flexible images --- */
+
+img {
+  max-width: 100%;
+  height: auto;
+  }
+
+/* --- body / first section --- */
+
+/* max-width and centered (horizontally) */
+
+body {
+  max-width: 60em;
+  color: #000; 
+  background: #eee;
+  padding: 0 1em;
+  margin: auto;
+  }
+
+/* links */
+
+a {
+  color: #000;
+  }
+
+/* class selector (functional and presentational) */
+
+/* negative value, offset padding right/left value from body */
+
+.full-width {
+  margin-right: -1em;
+  margin-left: -1em;
+  }
+
+/* --- header --- */
+
+/* selector, element selector, or type selector */
+
+header {
+  background: #086;
+  padding: 1.5em 1em 0;
+}
+
+/* descendant selector */
+
+header h1 {
+  font: bold 3.4em "Lucida Console", Monaco, monospace;
+  margin-top: 0;
+  margin-bottom: .35em;
+  }
+
+header dl {
+  display: inline-block;
+  font: .96em monospace;
+  vertical-align: top;
+  padding-bottom: 1em;
+  padding-left: 1.2em;
+  border-left: 1px solid #fff;
+  margin-right: 1.5em;
+  margin-left: .4em;
+  }
+
+header dl dt {
+  margin: 1em 0 .5em;
+  }
+
+.ltr-sp-minus-05em {
+  letter-spacing: -.05em;
+  }
+
+
+/* --- navigation --- */
+
+nav ul {
+  list-style: ul;
+  padding-left: 10em;
+  margin-bottom: .2em;
+  }
+
+nav li {
+  display: inline;
+  }
+
+nav li:first-child {
+  margin-right: 1.7em;
+  }
+
+nav a {
+  display: inline-block;
+  font: 1em "Lucida Console", Monaco, monospace;
+  color: #fff;
+  padding: 1em;
+  }
+
+
+
+#product {
+  background: #096;
+  }
+
+#product img {
+  vertical-align: middle; /* remove descender spacing on image */
+    padding: 1em 1em 1em;
+  }
+
+#product figcaption {
+  padding: 1em 1em; /* offset right/left padding */
+  }
+
+#product figcaption small {
+  vertical-align: .2em;
+  }
+
+#product figcaption small {
+  font: 1em monospace;
+  }
+
+/* --- sections / ingredients/directions --- */
+
+section {
+  clear: left;
+  padding-top: 1.6em;
+  }
+
+section h2 {
+  font: "Lucida Console", Monaco, monospace;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top: 0;
+  margin-bottom: 1.1em;
+  }
+
+section ol,
+section ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  }
+
+section ol li,
+section ul li {
+  padding: 1em .5em;
+  border-top: 1px solid #ddd;
+  margin: 0 1.2em;
+  }
+
+#ingredients li {
+  list-style: circle;
+  font: normal 1em/1.45 "Lucida Console", Monaco, monospace;
+  }
+
+/* descendant selectors, three seletors deep max, else rethink how to select */
+
+#instructions ol {
+  list-style: decimal inside;
+  }
+
+#instructions li {
+  font: bold 1em "Lucida Console", Monaco, monospace;
+  margin: 0;
+  }
+
+#instructions li p {
+  display: inline;
+  font: normal 1em/1.45 "Lucida Console", Monaco, monospace;
+  margin: .5em 0;
+  }
+
+/* --- back to top / jump-link-top */
+
+.jump-link-top {
+  text-align: center;
+  }
+
+.jump-link-top a {
+  display: block;
+  font: 1em monospace;
+  text-decoration: none;
+  padding: 1.2em;
+  }
+
+.jump-link-text {
+  text-decoration: underline;
+  }
+
+
+
+/* --- gallery --- */
+
+/* gallery structure */
+
+.gallery {
+	max-width: 40em; /* max-width of images with controls (prev/next) */
+	margin: auto;
+  overflow: hidden; /* Hide slides, except for current slide */
+}
+
+.gallery ol {
+  list-style: none;
+  width: 400%; /* Number of slides x 100% */
+  padding-left: 0;
+}
+
+/* gallery slide(s) */
+
+.gallery li {
+  position: relative;
+  float: left;
+  width: 25%; /* 100% divided by number of slides */
+  overflow: hidden;
+}
+
+.gallery figure {
+ display: block;
+ width: 90%;
+ margin: 0 auto;
+}
+
+/* gallery controls */
+
+.gallery .controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%;
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.gallery .next {
+  right: 0;
+  left: auto;
+}
+
+.gallery .controls div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border: 1em dashed transparent;
+  border-left: 0;
+  border-right: 1em solid #333;
+  margin: auto 0;
+}
+
+.gallery .next div {
+  left: auto;
+  right: 0;
+  border-right: 0;
+  border-left: 1em solid #333;
+}
+
+/* :hover */
+
+.gallery .prev:hover div {
+  border-right-color: #999;
+}
+
+.gallery .next:hover div {
+  border-left-color: #999;
+}
+}
+
+
+@media (min-width)
