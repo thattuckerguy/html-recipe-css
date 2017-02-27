@@ -185,6 +185,14 @@ section ul li {
   font: normal 1em/1.45 "Lucida Console", Monaco, monospace;
   margin: .5em 0;
   }
+#description {
+    display: inline;
+    font: normal 1em/1.45 "Lucida Console", Monaco, monospace;
+  margin: 1em 0;
+    text-align: center;
+    padding-top: 2em;
+    
+}
 
 /* --- back to top / jump-link-top */
 
