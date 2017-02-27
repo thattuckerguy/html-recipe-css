@@ -64,14 +64,16 @@ header {
 
 header h1 {
   font: bold 3.4em "Lucida Console", Monaco, monospace;
-  margin-top: 0;
+  margin-top: .5;
+  margin-left: .5em;
   margin-bottom: .35em;
+  vertical-align: middle;
   }
 
 header dl {
   display: inline-block;
   font: .96em monospace;
-  vertical-align: top;
+  vertical-align: middle;
   padding-bottom: 1em;
   padding-left: 1.2em;
   border-left: 1px solid #fff;
@@ -92,8 +94,8 @@ header dl dt {
 
 nav ul {
   list-style: ul;
-  padding-left: 10em;
-  margin-bottom: .2em;
+  padding-left: em;
+  margin-bottom: 2em;
   }
 
 nav li {
@@ -211,6 +213,10 @@ section ul li {
 	max-width: 40em; /* max-width of images with controls (prev/next) */
 	margin: auto;
   overflow: hidden; /* Hide slides, except for current slide */
+    text-align: center;
+    font: "Lucida Console", Monaco, monospace;
+  text-transform: uppercase;
+    
 }
 
 .gallery ol {
@@ -281,7 +287,41 @@ section ul li {
 .gallery .next:hover div {
   border-left-color: #999;
 }
+
+@media (min-width: 24em) {
+
+
+  .recipe {
+    max-width: 19.9375em;
+    padding: 0 1em 1em;
+    border: 1px solid #ddd;
+    margin: 5% auto;
+    overflow: hidden;
+    }
+
 }
 
+@media (min-width: 60em) {
 
-@media (min-width)
+  .recipe {
+    max-width: none;
+    }
+
+  
+
+  header dl {
+    margin-bottom: 1.6em;
+    }
+
+ 
+
+  #ingredients {
+    width: 38%;
+    margin-left: 40%;
+    }
+
+  #instructions {
+    width: 100%;
+    
+      text-align: center;
+    }
