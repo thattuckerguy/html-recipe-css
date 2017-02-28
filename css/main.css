@@ -231,6 +231,7 @@ section ul li {
   list-style: none;
   width: 400%; /* Number of slides x 100% */
   padding-left: 0;
+    
 }
 
 /* gallery slide(s) */
@@ -240,6 +241,7 @@ section ul li {
   float: left;
   width: 25%; /* 100% divided by number of slides */
   overflow: hidden;
+    padding-top: 6em;
 }
 
 .gallery figure {
@@ -252,7 +254,7 @@ section ul li {
 
 .gallery .controls {
   position: absolute;
-  top: 0;
+  top: 3em;
   left: 0;
   width: 5%;
   height: 100%;
